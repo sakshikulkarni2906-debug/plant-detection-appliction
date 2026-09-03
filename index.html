@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>PlantAI - Plant Detection</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            🌿 PlantAI
+        </div>
+
+        <div class="tagline">
+            AI Plant Identification
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <section class="hero">
+
+            <h1>
+                Identify Any Plant
+            </h1>
+
+            <p>
+                Upload a plant image and discover
+                its name, scientific information and more.
+            </p>
+
+        </section>
+
+
+        <section class="upload-card">
+
+            <div
+                class="upload-area"
+                id="uploadArea"
+            >
+
+                <div class="upload-icon">
+                    🌱
+                </div>
+
+                <h2>
+                    Upload Plant Image
+                </h2>
+
+                <p>
+                    JPG, JPEG or PNG
+                </p>
+
+                <input
+                    type="file"
+                    id="plantImage"
+                    accept="image/jpeg,image/png"
+                    hidden
+                >
+
+                <button
+                    type="button"
+                    id="chooseButton"
+                    class="choose-button"
+                >
+                    📷 Choose Image
+                </button>
+
+            </div>
+
+
+            <!-- Image Preview -->
+
+            <div
+                id="previewContainer"
+                class="preview-container"
+                hidden
+            >
+
+                <img
+                    id="previewImage"
+                    alt="Plant preview"
+                >
+
+                <button
+                    type="button"
+                    id="identifyButton"
+                    class="identify-button"
+                >
+                    🔍 Identify Plant
+                </button>
+
+            </div>
+
+
+            <!-- Loading -->
+
+            <div
+                id="loading"
+                class="loading"
+                hidden
+            >
+
+                <div class="spinner"></div>
+
+                <p>
+                    🌿 Identifying your plant...
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Result -->
+
+        <section
+            id="resultSection"
+            class="result-section"
+            hidden
+        >
+
+            <h2>
+                🌿 Plant Result
+            </h2>
+
+            <div class="result-card">
+
+                <h1 id="plantName">
+                    Plant Name
+                </h1>
+
+                <p
+                    id="scientificName"
+                    class="scientific-name"
+                >
+                    Scientific name
+                </p>
+
+                <div class="confidence">
+
+                    <span>
+                        Identification confidence
+                    </span>
+
+                    <strong id="confidence">
+                        0%
+                    </strong>
+
+                </div>
+
+                <div class="info-box">
+
+                    <h3>
+                        ⭐ Top Results
+                    </h3>
+
+                    <div id="topResults"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        Powered by Pl@ntNet
+
+    </footer>
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
